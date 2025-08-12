@@ -1,0 +1,125 @@
+:root {
+  --bg: #0b1020;
+  --card: #121939;
+  --muted: #a9b0d0;
+  --line: #1b2657;
+  --text: #e6e9f2;
+  --primary: #3a49a4;
+  --primary-2: #2b376f;
+  --success: #1fa97a;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); }
+
+.dash-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo {
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #0e1533;
+  font-size: 22px;
+}
+.title { margin: 0; font-size: 1.35rem; }
+.subtitle { margin: 2px 0 0; color: var(--muted); font-size: .92rem; }
+
+.session { display: flex; align-items: center; gap: 8px; }
+.badge { display:inline-block; padding: 6px 10px; border-radius: 999px; background:#25306a; border:1px solid #2b376f; }
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+.highlight h3 { margin-top: 0; }
+.actions { display: flex; gap: 10px; margin: 8px 0 12px; flex-wrap: wrap; }
+.primary-btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--primary-2);
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+.link-btn {
+  display: inline-flex; align-items: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--primary-2);
+  color: #cfd6ff;
+  text-decoration: none;
+  background: #0e1533;
+}
+.link-btn:hover, .primary-btn:hover { filter: brightness(1.05); }
+
+.muted { color: var(--muted); }
+.muted.small { font-size: .9rem; }
+.code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background:#0e1533; padding: 2px 6px; border-radius: 6px; border:1px solid var(--primary-2); }
+
+.stat {
+  display: grid; align-content: center; justify-items: start;
+}
+.stat-value { font-size: 2rem; font-weight: 700; line-height: 1; }
+.stat-label { color: var(--muted); }
+
+.info h3 { margin: 0 0 8px; }
+.tips { margin: 0; padding-left: 18px; }
+.tips li { margin: 6px 0; color: var(--text); }
+.tips .code { margin: 0 2px; }
+
+.table-card .table-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 8px;
+}
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 10px; border-bottom: 1px solid #233067; text-align: left; }
+th { color: var(--muted); }
+
+.ghost-btn {
+  border: 1px solid var(--primary-2);
+  background: #0e1533;
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.ghost-btn:hover { filter: brightness(1.1); }
+
+.alert {
+  padding: 10px 12px;
+  background: #2a1333;
+  border: 1px solid #5a235f;
+  border-radius: 10px;
+  color: #ffd9e0;
+}

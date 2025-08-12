@@ -1,0 +1,137 @@
+:root {
+  --bg: #0b1020;
+  --card: #121939;
+  --muted: #a9b0d0;
+  --line: #1b2657;
+  --text: #e6e9f2;
+  --primary: #3a49a4;
+  --primary-2: #2b376f;
+  --success: #1fa97a;
+  --danger: #e55757;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); }
+
+.vote-wrap {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.vote-card {
+  width: 100%;
+  max-width: 520px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+.vote-head {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.logo {
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #0e1533;
+  font-size: 22px;
+}
+
+.title { margin: 0; font-size: 1.3rem; }
+.subtitle { margin: 4px 0 0; color: var(--muted); font-size: .95rem; }
+
+.form { margin-top: 12px; }
+
+.label {
+  display: block;
+  margin: 14px 0 6px;
+  font-weight: 600;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--primary-2);
+  background: #0e1533;
+  color: var(--text);
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(58,73,164,.25);
+}
+
+.row { display: flex; gap: 8px; align-items: center; }
+.ghost-btn {
+  border: 1px solid var(--primary-2);
+  background: #0e1533;
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.ghost-btn:hover { filter: brightness(1.1); }
+
+.primary-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--primary-2);
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+.primary-btn:disabled { opacity: .7; cursor: not-allowed; }
+
+.banner {
+  margin: 10px 0 6px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-size: .95rem;
+}
+.banner.ok {
+  background: #0f2f2a;
+  border-color: #1d6c5b;
+  color: #c8ffee;
+}
+.banner.err {
+  background: #2a1333;
+  border-color: #5a235f;
+  color: #ffd9e0;
+}
+
+.hint {
+  text-align: center;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+.tips {
+  margin-top: 12px;
+  display: grid;
+  gap: 6px;
+}
+.tip {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--primary-2);
+  background: #0e1533;
+  color: var(--text);
+  font-size: .92rem;
+}

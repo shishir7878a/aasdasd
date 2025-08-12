@@ -1,0 +1,150 @@
+:root {
+  --bg: #0b1020;
+  --card: #121939;
+  --muted: #a9b0d0;
+  --line: #1b2657;
+  --text: #e6e9f2;
+  --primary: #3a49a4;
+  --primary-2: #2b376f;
+  --success: #1fa97a;
+  --danger: #e55757;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); }
+
+.reg-wrap {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.reg-card {
+  width: 100%;
+  max-width: 460px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+.reg-brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.logo {
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #0e1533;
+  font-size: 22px;
+}
+
+.title {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.subtitle {
+  margin: 2px 0 0;
+  font-size: .9rem;
+  color: var(--muted);
+}
+
+.form { margin-top: 8px; }
+
+.label {
+  display: block;
+  margin: 14px 0 6px;
+  font-weight: 600;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--primary-2);
+  background: #0e1533;
+  color: var(--text);
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(58,73,164,.25);
+}
+
+.pwd-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.pwd-row .pwd { flex: 1; }
+.ghost-btn {
+  border: 1px solid var(--primary-2);
+  background: #0e1533;
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.ghost-btn:hover { filter: brightness(1.1); }
+
+.primary-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--primary-2);
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+.primary-btn:disabled { opacity: .7; cursor: not-allowed; }
+
+.hint {
+  text-align: center;
+  margin-top: 12px;
+  color: var(--muted);
+}
+.hint a { color: #cfd6ff; text-decoration: underline; }
+
+.alert {
+  margin: 8px 0 12px;
+  padding: 10px 12px;
+  background: #2a1333;
+  border: 1px solid #5a235f;
+  border-radius: 10px;
+  color: #ffd9e0;
+}
+
+/* Password meter */
+.meter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 0;
+}
+.meter .bar {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: #1a224b;
+  border: 1px solid var(--primary-2);
+}
+.meter .bar.on { background: var(--success); border-color: #197d5c; }
+.meter-label {
+  font-size: .85rem;
+  color: var(--muted);
+}
+.meter-label.s1 { color: var(--danger); }
+.meter-label.s3,
+.meter-label.s4 { color: var(--success); }
